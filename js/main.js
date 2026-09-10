@@ -68,7 +68,7 @@ const App = {
         const location = heroSearchForm.querySelector('#hero-search-location')?.value || '';
         const propType = heroSearchForm.querySelector('#hero-search-type')?.value || 'all';
         const targetURL = `properties.html?search=${encodeURIComponent(location)}&type=${encodeURIComponent(propType)}`;
-        if (window.Router) {
+        if (window.Router && window.location.protocol !== 'file:') {
           window.Router.navigate(targetURL);
         } else {
           window.location.href = targetURL;

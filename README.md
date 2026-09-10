@@ -34,7 +34,9 @@ An elite, bespoke luxury real estate platform inspired by [reginalovesrealestate
 │   └── main.js                 # Lifecycle controller & mobile drawer
 ├── assets/
 │   └── images/                 # High-resolution architectural photography
+├── server.js                   # Lightweight zero-dependency local preview server
 ├── vercel.json                 # Vercel configuration for static clean URLs
+├── .vercelignore               # Ignores server.js on Vercel for 100% pure static deployment
 ├── .gitignore
 └── README.md
 ```
@@ -43,15 +45,17 @@ An elite, bespoke luxury real estate platform inspired by [reginalovesrealestate
 
 ## How to Run Locally
 
-1. Clone or download the repository.
-2. Run with any local static server:
-   - **Node.js (npx serve)**:
-     ```bash
-     npx serve .
-     ```
-   - **Python**:
-     ```bash
-     python -m http.server 3000
-     ```
-   - **VS Code**: Use the "Live Server" extension on `index.html`.
-3. Open `http://localhost:3000` (or the port specified by your server) in any modern web browser.
+### Option 1: Using Node.js (Recommended)
+```bash
+node server.js
+```
+Then open `http://localhost:3000` in your browser.
+
+### Option 2: Direct Double-Click
+Simply double-click `index.html` to open it in any web browser. (All pages and navigation work natively).
+
+---
+
+## Deployment to Vercel
+
+The repository includes `.vercelignore` and `vercel.json` configured for pure static deployment. You can connect your GitHub repository to Vercel and it will deploy automatically with zero errors.

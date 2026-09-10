@@ -7,6 +7,13 @@ const Router = {
   isTransitioning: false,
 
   init() {
+    // If opened directly via file:// protocol (e.g. double-clicked from local folder),
+    // disable the fetch-based SPA interceptor so native browser navigation works smoothly.
+    if (window.location.protocol === 'file:') {
+      console.log('Regina Fraga: running on file:// protocol. Using native browser navigation.');
+      return;
+    }
+
     this.createCurtain();
     this.bindLinks();
     window.addEventListener('popstate', (e) => this.handlePopState(e));
@@ -30,9 +37,13 @@ const Router = {
   },
 
   bindLinks(container = document) {
+    if (window.location.protocol === 'file:') return;
+
     const links = container.querySelectorAll('a[href]');
     links.forEach(link => {
+      if (link.dataset.routerBound) return;
       const href = link.getAttribute('href');
+
       // Ignore anchors, external links, mailto, tel, downloads
       if (!href || href.startsWith('#') || href.startsWith('mailto:') || href.startsWith('tel:') || 
           href.startsWith('http://') || href.startsWith('https://') || link.hasAttribute('download') || 
@@ -40,17 +51,12 @@ const Router = {
         return;
       }
 
-      // Remove existing router listener if any
-      link.removeEventListener('click', this.handleLinkClick);
+      link.dataset.routerBound = 'true';
       link.addEventListener('click', (e) => {
         e.preventDefault();
         this.navigate(href);
       });
     });
-  },
-
-  handleLinkClick(e) {
-    // bound dynamically
   },
 
   normalizePath(url) {
@@ -94,6 +100,8 @@ const Router = {
 
       if (!newContent) {
         // Fallback to normal navigation if container not found
+        this.resetCurtain();
+        this.isTransitioning = false;
         window.location.href = url;
         return;
       }
@@ -130,7 +138,9 @@ const Router = {
       }
 
     } catch (err) {
-      console.warn('SPA fetch navigation failed, falling back to standard navigation:', err);
+      console.warn('SPA fetch navigation fallback to native:', err);
+      this.resetCurtain();
+      this.isTransitioning = false;
       window.location.href = url;
       return;
     }
@@ -145,14 +155,23 @@ const Router = {
     this.navigate(url, false);
   },
 
+  resetCurtain() {
+    const bronzeLayer = document.querySelector('.curtain-layer.layer-bronze');
+    const charcoalLayer = document.querySelector('.curtain-layer.layer-charcoal');
+    const brand = document.querySelector('.curtain-brand');
+    if (bronzeLayer) bronzeLayer.style.transform = 'translateY(100%)';
+    if (charcoalLayer) charcoalLayer.style.transform = 'translateY(100%)';
+    if (brand) brand.style.opacity = '0';
+  },
+
   playExitTransition() {
     return new Promise(resolve => {
       const bronzeLayer = document.querySelector('.curtain-layer.layer-bronze');
       const charcoalLayer = document.querySelector('.curtain-layer.layer-charcoal');
       const brand = document.querySelector('.curtain-brand');
 
-      if (!window.gsap) {
-        setTimeout(resolve, 300);
+      if (!window.gsap || !bronzeLayer || !charcoalLayer) {
+        setTimeout(resolve, 150);
         return;
       }
 
@@ -161,18 +180,18 @@ const Router = {
         .set(brand, { opacity: 0, y: 20 })
         .to(bronzeLayer, {
           y: '0%',
-          duration: 0.5,
+          duration: 0.45,
           ease: 'power3.inOut'
         })
         .to(charcoalLayer, {
           y: '0%',
-          duration: 0.5,
+          duration: 0.45,
           ease: 'power3.inOut'
-        }, '-=0.35')
+        }, '-=0.3')
         .to(brand, {
           opacity: 1,
           y: 0,
-          duration: 0.3,
+          duration: 0.25,
           ease: 'power2.out'
         }, '-=0.15');
     });
@@ -184,8 +203,8 @@ const Router = {
       const charcoalLayer = document.querySelector('.curtain-layer.layer-charcoal');
       const brand = document.querySelector('.curtain-brand');
 
-      if (!window.gsap) {
-        setTimeout(resolve, 300);
+      if (!window.gsap || !bronzeLayer || !charcoalLayer) {
+        setTimeout(resolve, 150);
         return;
       }
 
@@ -193,19 +212,19 @@ const Router = {
       tl.to(brand, {
           opacity: 0,
           y: -20,
-          duration: 0.25,
+          duration: 0.2,
           ease: 'power2.in'
         })
         .to(charcoalLayer, {
           y: '-100%',
-          duration: 0.55,
+          duration: 0.45,
           ease: 'power3.inOut'
         })
         .to(bronzeLayer, {
           y: '-100%',
-          duration: 0.55,
+          duration: 0.45,
           ease: 'power3.inOut'
-        }, '-=0.4')
+        }, '-=0.3')
         .set([bronzeLayer, charcoalLayer], { y: '100%' });
     });
   },

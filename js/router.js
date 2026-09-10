@@ -53,13 +53,19 @@ const Router = {
     // bound dynamically
   },
 
+  normalizePath(url) {
+    const raw = (url || '').split('?')[0].split('#')[0].split('/').pop() || 'index';
+    const clean = raw.replace(/\.html$/, '');
+    return clean === '' ? 'index' : clean;
+  },
+
   async navigate(url, push = true) {
     if (this.isTransitioning) return;
-    const currentPath = window.location.pathname.split('/').pop() || 'index.html';
-    const targetPath = url.split('/').pop().split('?')[0].split('#')[0] || 'index.html';
+    const currentClean = this.normalizePath(window.location.pathname);
+    const targetClean = this.normalizePath(url);
     
     // If navigating to the exact same page without query, just smooth scroll top
-    if (currentPath === targetPath && !url.includes('?')) {
+    if (currentClean === targetClean && !url.includes('?')) {
       window.scrollTo({ top: 0, behavior: 'smooth' });
       return;
     }
@@ -70,8 +76,13 @@ const Router = {
     await this.playExitTransition();
 
     try {
-      // 2. Fetch destination page
-      const response = await fetch(url);
+      // 2. Fetch destination page (with .html fallback if server doesn't rewrite clean URLs)
+      let response = await fetch(url);
+      if (!response.ok && !url.includes('.html') && !url.includes('?')) {
+        const fallbackUrl = url.endsWith('/') ? `${url}index.html` : `${url}.html`;
+        const fallbackRes = await fetch(fallbackUrl);
+        if (fallbackRes.ok) response = fallbackRes;
+      }
       if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
       const htmlText = await response.text();
 
@@ -200,11 +211,12 @@ const Router = {
   },
 
   updateActiveNav(url) {
-    const page = url.split('/').pop().split('?')[0].split('#')[0] || 'index.html';
+    const targetClean = this.normalizePath(url);
     const navLinks = document.querySelectorAll('.nav-link, .drawer-links a');
     navLinks.forEach(link => {
-      const linkHref = link.getAttribute('href')?.split('/').pop().split('?')[0].split('#')[0] || 'index.html';
-      if (linkHref === page || (page === '' && linkHref === 'index.html')) {
+      const linkHref = link.getAttribute('href');
+      const linkClean = this.normalizePath(linkHref);
+      if (linkClean === targetClean) {
         link.classList.add('active');
       } else {
         link.classList.remove('active');

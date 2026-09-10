@@ -34,7 +34,7 @@ An elite, bespoke luxury real estate platform inspired by [reginalovesrealestate
 │   └── main.js                 # Lifecycle controller & mobile drawer
 ├── assets/
 │   └── images/                 # High-resolution architectural photography
-├── server.js                   # Lightweight zero-dependency static preview server
+├── vercel.json                 # Vercel configuration for static clean URLs
 ├── .gitignore
 └── README.md
 ```
@@ -44,8 +44,14 @@ An elite, bespoke luxury real estate platform inspired by [reginalovesrealestate
 ## How to Run Locally
 
 1. Clone or download the repository.
-2. Run with Node.js:
-   ```bash
-   node server.js
-   ```
-3. Open `http://localhost:3000` in any modern web browser.
+2. Run with any local static server:
+   - **Node.js (npx serve)**:
+     ```bash
+     npx serve .
+     ```
+   - **Python**:
+     ```bash
+     python -m http.server 3000
+     ```
+   - **VS Code**: Use the "Live Server" extension on `index.html`.
+3. Open `http://localhost:3000` (or the port specified by your server) in any modern web browser.

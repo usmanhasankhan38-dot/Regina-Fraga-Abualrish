@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact & Home Valuation | Regina Fraga Abualrish | Dallas Luxury Real Estate</title>
+  <meta name="description" content="Connect with Regina Fraga Abualrish for private Dallas real estate representation or calculate an instant fair market valuation for your Texas property.">
+  
+  <!-- CSS Stylesheets -->
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/transitions.css">
+
+  <!-- GSAP 3 & ScrollTrigger (CDN) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+</head>
+<body>
+
+  <!-- Top Bar -->
+  <div class="top-bar">
+    <div class="container top-bar-inner">
+      <div class="top-bar-badge">
+        <span class="dot"></span>
+        <span>Regina Fraga Abualrish, REALTOR® • License #735487 • Ready Real Estate LLC</span>
+      </div>
+      <div class="top-bar-links">
+        <a href="tel:469-880-5386">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.02-.24c1.12.37 2.33.57 3.57.57a1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.57a1 1 0 01-.24 1.02l-2.21 2.2z"/></svg>
+          (469) 880-5386
+        </a>
+        <a href="mailto:reginalovesrealestate@gmail.com">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+          reginalovesrealestate@gmail.com
+        </a>
+        <span>Dallas, Texas</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Floating Claymorphic Navigation -->
+  <header class="site-header">
+    <div class="nav-pill-container">
+      <a href="index.html" class="brand-logo">
+        <div class="brand-mark">R</div>
+        <div class="brand-text">
+          <span class="brand-name">Regina Fraga</span>
+          <span class="brand-tagline">Dallas Luxury Real Estate</span>
+        </div>
+      </a>
+
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="properties.html" class="nav-link">Properties</a></li>
+          <li><a href="about.html" class="nav-link">About Regina</a></li>
+          <li><a href="contact.html" class="nav-link active">Contact & Valuation</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-cta-wrap">
+        <a href="tel:469-880-5386" class="nav-phone-pill">
+          <svg viewBox="0 0 24 24"><path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.02-.24c1.12.37 2.33.57 3.57.57a1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.57a1 1 0 01-.24 1.02l-2.21 2.2z"/></svg>
+          <span>469-880-5386</span>
+        </a>
+        <a href="contact.html" class="btn btn-bronze btn-sm">Book Consultation</a>
+        <button class="mobile-toggle" aria-label="Open mobile menu">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="drawer-backdrop"></div>
+  <div class="mobile-drawer">
+    <div>
+      <div class="drawer-header">
+        <a href="index.html" class="brand-logo">
+          <div class="brand-mark">R</div>
+          <div class="brand-text">
+            <span class="brand-name">Regina Fraga</span>
+            <span class="brand-tagline">Luxury Real Estate</span>
+          </div>
+        </a>
+        <button class="drawer-close-btn" aria-label="Close menu">✕</button>
+      </div>
+      <ul class="drawer-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="properties.html">Properties</a></li>
+        <li><a href="about.html">About Regina</a></li>
+        <li><a href="contact.html" class="active">Contact & Valuation</a></li>
+      </ul>
+    </div>
+    <div style="margin-top: 30px;">
+      <a href="contact.html" class="btn btn-bronze btn-lg" style="width: 100%;">Book Private Consultation</a>
+      <p style="text-align: center; margin-top: 14px; font-size: 0.85rem; color: var(--text-muted);">Ready Real Estate LLC • Dallas, TX</p>
+    </div>
+  </div>
+
+  <!-- MAIN DYNAMIC CONTAINER FOR SPA ROUTING -->
+  <main id="page-container">
+
+    <!-- HEADER INTRO -->
+    <section class="section-sm" style="background: linear-gradient(180deg, var(--bg-travertine) 0%, #F5EFE4 100%); padding-bottom: 2rem;">
+      <div class="container">
+        <div class="section-header" style="margin-bottom: 1.5rem;">
+          <span class="eyebrow">Direct Advisory & Valuation</span>
+          <h1 style="font-size: clamp(2.5rem, 4.2vw, 3.8rem); margin: 8px 0 14px;">Connect With Regina Fraga</h1>
+          <p>Whether evaluating your property's value in today's dynamic market, requesting a private showing, or discussing bespoke acquisition strategy, start here.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT DETAILS & MULTI-STEP VALUATION SUITE -->
+    <section class="section" style="padding-top: 0; background: var(--bg-travertine);">
+      <div class="container">
+        
+        <div class="contact-main-grid" style="display: grid; grid-template-columns: 1fr 1.35fr; gap: clamp(2rem, 4vw, 4rem); align-items: flex-start;">
+          
+          <!-- Left Column: Direct VIP Contact Channels & Office Info -->
+          <div style="display: flex; flex-direction: column; gap: 24px;">
+            
+            <!-- Direct Info Card -->
+            <div class="clay-card" style="padding: 32px; background: #FFFFFF;">
+              <span class="eyebrow" style="margin-bottom: 6px;">Direct Office</span>
+              <h3 style="font-family: var(--font-serif); font-size: 1.8rem; margin-bottom: 20px;">Regina Fraga Abualrish</h3>
+              
+              <div style="display: flex; flex-direction: column; gap: 18px;">
+                <div style="display: flex; gap: 14px; align-items: flex-start;">
+                  <div class="diff-icon-wrap" style="width: 44px; height: 44px; flex-shrink: 0;">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                  </div>
+                  <div>
+                    <div style="font-size: 0.76rem; font-weight: 700; text-transform: uppercase; color: var(--text-muted);">Direct Mobile & Text</div>
+                    <a href="tel:469-880-5386" style="font-weight: 700; font-size: 1.1rem; color: var(--text-espresso);">(469) 880-5386</a>
+                  </div>
+                </div>
+
+                <div style="display: flex; gap: 14px; align-items: flex-start;">
+                  <div class="diff-icon-wrap" style="width: 44px; height: 44px; flex-shrink: 0;">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                  </div>
+                  <div>
+                    <div style="font-size: 0.76rem; font-weight: 700; text-transform: uppercase; color: var(--text-muted);">Confidential Email</div>
+                    <a href="mailto:reginalovesrealestate@gmail.com" style="font-weight: 700; font-size: 1.05rem; color: var(--bronze-dark); word-break: break-all;">reginalovesrealestate@gmail.com</a>
+                  </div>
+                </div>
+
+                <div style="display: flex; gap: 14px; align-items: flex-start;">
+                  <div class="diff-icon-wrap" style="width: 44px; height: 44px; flex-shrink: 0;">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                  </div>
+                  <div>
+                    <div style="font-size: 0.76rem; font-weight: 700; text-transform: uppercase; color: var(--text-muted);">Dallas Headquarters</div>
+                    <p style="font-weight: 600; color: var(--text-espresso); line-height: 1.4;">
+                      Ready Real Estate LLC<br>
+                      8080 N. Central Expressway, Suite 1700<br>
+                      Dallas, TX 75206
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Quick Hours Note -->
+              <div style="margin-top: 24px; padding-top: 20px; border-top: 1px solid rgba(164,125,73,0.15); font-size: 0.88rem; color: var(--text-muted);">
+                <strong>Client Availability:</strong> Monday – Saturday 8:00 AM – 7:30 PM CST. Private weekend showings and off-market confidential previews by scheduled appointment.
+              </div>
+            </div>
+
+            <!-- Skyline Banner Preview -->
+            <div class="clay-card" style="position: relative; height: 240px; overflow: hidden; border-radius: 28px;">
+              <img src="assets/images/dallas_skyline.jpg" alt="Dallas Skyline at Sunset" style="width: 100%; height: 100%; object-fit: cover;">
+              <div style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(20,18,16,0.2) 0%, rgba(20,18,16,0.85) 100%); display: flex; flex-direction: column; justify-content: flex-end; padding: 24px; color: #FFFFFF;">
+                <span class="eyebrow" style="color: var(--bronze-accent); margin-bottom: 2px;">Local Market Authority</span>
+                <h4 style="color: #FFFFFF; font-family: var(--font-serif); font-size: 1.35rem;">Serving All Greater Dallas-Fort Worth</h4>
+                <p style="font-size: 0.84rem; color: #DDD4C7;">Highland Park • Preston Hollow • Uptown • Lakewood • Southlake • Frisco</p>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Right Column: Interactive 3-Step Home Valuation & Lead Funnel -->
+          <div id="valuation-wizard-card" class="clay-card" style="padding: clamp(1.8rem, 3vw, 2.6rem); background: #FFFFFF; border-radius: 32px;">
+            
+            <div style="margin-bottom: 24px;">
+              <span class="eyebrow">Tactile Valuation Tool</span>
+              <h2 style="font-family: var(--font-serif); font-size: clamp(1.8rem, 2.6vw, 2.4rem); margin-top: 4px;">Complimentary Home Valuation</h2>
+              <p style="font-size: 0.95rem; color: var(--text-secondary);">Complete 3 simple steps to estimate your current market equity and receive a full comparative market analysis (CMA).</p>
+            </div>
+
+            <!-- Step Progress Indicator -->
+            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 28px; position: relative;">
+              <div style="position: absolute; left: 16px; right: 16px; top: 18px; height: 2px; background: #ECE5DA; z-index: 0;"></div>
+              
+              <div class="wizard-indicator-step active" style="position: relative; z-index: 1; text-align: center;">
+                <div style="width: 36px; height: 36px; border-radius: 50%; background: var(--bronze-primary); color: #fff; display: flex; align-items: center; justify-content: center; font-weight: 700; margin: 0 auto 6px; box-shadow: 0 4px 10px rgba(164,125,73,0.3);">1</div>
+                <span style="font-size: 0.72rem; font-weight: 700; text-transform: uppercase; color: var(--text-espresso);">Address</span>
+              </div>
+
+              <div class="wizard-indicator-step" style="position: relative; z-index: 1; text-align: center;">
+                <div style="width: 36px; height: 36px; border-radius: 50%; background: #EDE6DA; color: var(--text-muted); display: flex; align-items: center; justify-content: center; font-weight: 700; margin: 0 auto 6px;">2</div>
+                <span style="font-size: 0.72rem; font-weight: 700; text-transform: uppercase; color: var(--text-muted);">Specs</span>
+              </div>
+
+              <div class="wizard-indicator-step" style="position: relative; z-index: 1; text-align: center;">
+                <div style="width: 36px; height: 36px; border-radius: 50%; background: #EDE6DA; color: var(--text-muted); display: flex; align-items: center; justify-content: center; font-weight: 700; margin: 0 auto 6px;">3</div>
+                <span style="font-size: 0.72rem; font-weight: 700; text-transform: uppercase; color: var(--text-muted);">Valuation</span>
+              </div>
+            </div>
+
+            <form id="valuation-wizard-form">
+              
+              <!-- STEP 1 PANEL: Property Address & Goal -->
+              <div class="wizard-step-panel" data-step="1">
+                <div style="display: flex; flex-direction: column; gap: 18px;">
+                  <div class="search-field-group">
+                    <label class="search-field-label">Street Address *</label>
+                    <input type="text" id="val-address" required placeholder="e.g. 4200 Lakeside Drive" class="clay-input">
+                  </div>
+
+                  <div class="search-field-group">
+                    <label class="search-field-label">Neighborhood / Municipality *</label>
+                    <select id="val-neighborhood" class="search-select">
+                      <option value="Highland Park">Highland Park / University Park</option>
+                      <option value="Preston Hollow">Preston Hollow</option>
+                      <option value="Uptown">Uptown Dallas / Turtle Creek</option>
+                      <option value="Lakewood">Lakewood / East Dallas</option>
+                      <option value="Southlake">Southlake / Colleyville</option>
+                      <option value="Plano / Frisco">Frisco / Plano</option>
+                      <option value="Addison">Addison / North Dallas</option>
+                    </select>
+                  </div>
+
+                  <div class="search-field-group">
+                    <label class="search-field-label">Property Architecture Type</label>
+                    <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+                      <button type="button" class="search-tab-btn wizard-option-pill active" data-group="propertyType" data-value="Single Family Estate">Single Family Estate</button>
+                      <button type="button" class="search-tab-btn wizard-option-pill" data-group="propertyType" data-value="Architectural Modern">Architectural Modern</button>
+                      <button type="button" class="search-tab-btn wizard-option-pill" data-group="propertyType" data-value="High-Rise Penthouse">Sky Penthouse</button>
+                    </div>
+                  </div>
+
+                  <div class="search-field-group">
+                    <label class="search-field-label">Your Target Timeline</label>
+                    <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+                      <button type="button" class="search-tab-btn wizard-option-pill active" data-group="timeline" data-value="30-60 days">Selling in 30-60 Days</button>
+                      <button type="button" class="search-tab-btn wizard-option-pill" data-group="timeline" data-value="3-6 months">3–6 Months</button>
+                      <button type="button" class="search-tab-btn wizard-option-pill" data-group="timeline" data-value="curious">Just Curious</button>
+                    </div>
+                  </div>
+
+                  <div style="margin-top: 12px; display: flex; justify-content: flex-end;">
+                    <button type="button" class="btn btn-bronze" data-wizard-next>
+                      Continue to Specs
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- STEP 2 PANEL: Home Characteristics & Condition -->
+              <div class="wizard-step-panel" data-step="2" style="display: none;">
+                <div style="display: flex; flex-direction: column; gap: 18px;">
+                  <div class="form-row-2col" style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px;">
+                    <div class="search-field-group">
+                      <label class="search-field-label">Bedrooms</label>
+                      <select class="search-select">
+                        <option value="3">3 Bedrooms</option>
+                        <option value="4" selected>4 Bedrooms</option>
+                        <option value="5">5 Bedrooms</option>
+                        <option value="6">6+ Bedrooms</option>
+                      </select>
+                    </div>
+                    <div class="search-field-group">
+                      <label class="search-field-label">Bathrooms</label>
+                      <select class="search-select">
+                        <option value="3">3 Bathrooms</option>
+                        <option value="4">4 Bathrooms</option>
+                        <option value="5" selected>4.5 - 5 Bathrooms</option>
+                        <option value="6">6+ Bathrooms</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div class="search-field-group">
+                    <label class="search-field-label">Approximate Finished Living Sq Ft</label>
+                    <input type="number" id="val-sqft" value="4800" min="1000" max="25000" step="100" class="clay-input" placeholder="e.g. 4800">
+                  </div>
+
+                  <div class="search-field-group">
+                    <label class="search-field-label">Interior & Architectural Condition</label>
+                    <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+                      <button type="button" class="search-tab-btn wizard-option-pill active" data-group="condition" data-value="Designer Remodeled">Designer Remodeled</button>
+                      <button type="button" class="search-tab-btn wizard-option-pill" data-group="condition" data-value="Pristine Executive">Pristine Executive</button>
+                      <button type="button" class="search-tab-btn wizard-option-pill" data-group="condition" data-value="Well Maintained">Well Maintained</button>
+                      <button type="button" class="search-tab-btn wizard-option-pill" data-group="condition" data-value="Original Character">Original Character</button>
+                    </div>
+                  </div>
+
+                  <div class="wizard-btn-row" style="margin-top: 12px; display: flex; justify-content: space-between;">
+                    <button type="button" class="btn btn-light" data-wizard-prev>← Back</button>
+                    <button type="button" class="btn btn-bronze" data-wizard-next>Calculate Estimate →</button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- STEP 3 PANEL: Result Preview & Lead Capture -->
+              <div class="wizard-step-panel" data-step="3" style="display: none;">
+                <div style="display: flex; flex-direction: column; gap: 16px;">
+                  
+                  <!-- Dynamic Result Box -->
+                  <div id="valuation-calc-result"></div>
+
+                  <div class="form-row-2col" style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px;">
+                    <div class="search-field-group">
+                      <label class="search-field-label">Full Name *</label>
+                      <input type="text" id="val-name" required placeholder="Jane Doe" class="clay-input">
+                    </div>
+                    <div class="search-field-group">
+                      <label class="search-field-label">Direct Phone *</label>
+                      <input type="tel" id="val-phone" required placeholder="(214) 555-0192" class="clay-input">
+                    </div>
+                  </div>
+
+                  <div class="search-field-group">
+                    <label class="search-field-label">Email Address *</label>
+                    <input type="email" id="val-email" required placeholder="jane@example.com" class="clay-input">
+                  </div>
+
+                  <div class="search-field-group">
+                    <label class="search-field-label">Preferred Time for Regina to Connect</label>
+                    <select class="search-select">
+                      <option value="morning">Morning (9:00 AM – 12:00 PM)</option>
+                      <option value="afternoon" selected>Afternoon (1:00 PM – 5:00 PM)</option>
+                      <option value="evening">Evening (5:30 PM – 7:30 PM)</option>
+                    </select>
+                  </div>
+
+                  <div style="margin-top: 12px; display: flex; justify-content: space-between; align-items: center;">
+                    <button type="button" class="btn btn-light" data-wizard-prev>← Edit Specs</button>
+                    <button type="submit" class="btn btn-bronze btn-lg">Receive Full Dossier & CMA</button>
+                  </div>
+
+                  <p style="font-size: 0.78rem; color: var(--text-muted); text-align: center; margin-top: 8px;">
+                    Strictly confidential. No automated robocalls or shared third-party marketing lists.
+                  </p>
+                </div>
+              </div>
+
+            </form>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- LUXURY CLAYMORPHIC FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="brand-logo" style="margin-bottom: 16px;">
+            <div class="brand-mark">R</div>
+            <div class="brand-text">
+              <span class="brand-name" style="color: #FFFFFF;">Regina Fraga Abualrish</span>
+              <span class="brand-tagline">Texas REALTOR® • Luxury Specialist</span>
+            </div>
+          </div>
+          <p>
+            Dedicated to elevating the standard of luxury real estate representation across Dallas-Fort Worth. Backed by the robust technology and market strength of Ready Real Estate LLC.
+          </p>
+          <div class="footer-trec-card">
+            <strong>Ready Real Estate LLC</strong><br>
+            8080 N. Central Expressway, Suite 1700, Dallas, TX 75206<br>
+            Texas Real Estate Commission License #735487
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h5>Navigation</h5>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="properties.html">Featured Residences</a></li>
+            <li><a href="about.html">About Regina Fraga</a></li>
+            <li><a href="contact.html">Instant Home Valuation</a></li>
+            <li><a href="contact.html">Schedule Consultation</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>Prime Markets</h5>
+          <ul class="footer-links">
+            <li><a href="properties.html?search=Highland%20Park">Highland Park</a></li>
+            <li><a href="properties.html?search=Preston%20Hollow">Preston Hollow</a></li>
+            <li><a href="properties.html?search=Uptown">Uptown Dallas</a></li>
+            <li><a href="properties.html?search=Lakewood">Lakewood & East Dallas</a></li>
+            <li><a href="properties.html?search=Southlake">Southlake & Frisco</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>Direct Inquiries</h5>
+          <p style="color: #DDD4C7; font-size: 0.95rem; margin-bottom: 12px;">
+            <strong>Phone:</strong> <a href="tel:469-880-5386" style="color: var(--bronze-accent);">(469) 880-5386</a><br>
+            <strong>Email:</strong> <a href="mailto:reginalovesrealestate@gmail.com" style="color: var(--bronze-accent);">reginalovesrealestate@gmail.com</a>
+          </p>
+          <a href="contact.html" class="btn btn-bronze btn-sm">Direct Message</a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          © 2026 Regina Fraga Abualrish. All Rights Reserved. Equal Housing Opportunity.
+        </div>
+        <div style="display: flex; gap: 18px;">
+          <a href="https://www.trec.texas.gov/" target="_blank" rel="noopener">TREC Consumer Protection Notice</a>
+          <a href="https://www.trec.texas.gov/" target="_blank" rel="noopener">Information About Brokerage Services</a>
+          <a href="contact.html">Privacy Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Core Scripts -->
+  <script src="js/router.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/properties.js"></script>
+  <script src="js/valuation.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

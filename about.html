@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Regina Fraga Abualrish | Dallas Luxury REALTOR®</title>
+  <meta name="description" content="Learn about Regina Fraga Abualrish, top-producing Dallas REALTOR® with Ready Real Estate LLC. Over 22 years of high-stakes marketing, brand advocacy, and North Texas luxury acumen.">
+  
+  <!-- CSS Stylesheets -->
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/transitions.css">
+
+  <!-- GSAP 3 & ScrollTrigger (CDN) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+</head>
+<body>
+
+  <!-- Top Bar -->
+  <div class="top-bar">
+    <div class="container top-bar-inner">
+      <div class="top-bar-badge">
+        <span class="dot"></span>
+        <span>Regina Fraga Abualrish, REALTOR® • License #735487 • Ready Real Estate LLC</span>
+      </div>
+      <div class="top-bar-links">
+        <a href="tel:469-880-5386">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.02-.24c1.12.37 2.33.57 3.57.57a1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.57a1 1 0 01-.24 1.02l-2.21 2.2z"/></svg>
+          (469) 880-5386
+        </a>
+        <a href="mailto:reginalovesrealestate@gmail.com">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+          reginalovesrealestate@gmail.com
+        </a>
+        <span>Dallas, Texas</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Floating Claymorphic Navigation -->
+  <header class="site-header">
+    <div class="nav-pill-container">
+      <a href="index.html" class="brand-logo">
+        <div class="brand-mark">R</div>
+        <div class="brand-text">
+          <span class="brand-name">Regina Fraga</span>
+          <span class="brand-tagline">Dallas Luxury Real Estate</span>
+        </div>
+      </a>
+
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="properties.html" class="nav-link">Properties</a></li>
+          <li><a href="about.html" class="nav-link active">About Regina</a></li>
+          <li><a href="contact.html" class="nav-link">Contact & Valuation</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-cta-wrap">
+        <a href="tel:469-880-5386" class="nav-phone-pill">
+          <svg viewBox="0 0 24 24"><path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.02-.24c1.12.37 2.33.57 3.57.57a1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.57a1 1 0 01-.24 1.02l-2.21 2.2z"/></svg>
+          <span>469-880-5386</span>
+        </a>
+        <a href="contact.html" class="btn btn-bronze btn-sm">Book Consultation</a>
+        <button class="mobile-toggle" aria-label="Open mobile menu">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="drawer-backdrop"></div>
+  <div class="mobile-drawer">
+    <div>
+      <div class="drawer-header">
+        <a href="index.html" class="brand-logo">
+          <div class="brand-mark">R</div>
+          <div class="brand-text">
+            <span class="brand-name">Regina Fraga</span>
+            <span class="brand-tagline">Luxury Real Estate</span>
+          </div>
+        </a>
+        <button class="drawer-close-btn" aria-label="Close menu">✕</button>
+      </div>
+      <ul class="drawer-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="properties.html">Properties</a></li>
+        <li><a href="about.html" class="active">About Regina</a></li>
+        <li><a href="contact.html">Contact & Valuation</a></li>
+      </ul>
+    </div>
+    <div style="margin-top: 30px;">
+      <a href="contact.html" class="btn btn-bronze btn-lg" style="width: 100%;">Book Private Consultation</a>
+      <p style="text-align: center; margin-top: 14px; font-size: 0.85rem; color: var(--text-muted);">Ready Real Estate LLC • Dallas, TX</p>
+    </div>
+  </div>
+
+  <!-- MAIN DYNAMIC CONTAINER FOR SPA ROUTING -->
+  <main id="page-container">
+
+    <!-- EDITORIAL BIOGRAPHY SECTION -->
+    <section class="section" style="background: linear-gradient(180deg, var(--bg-travertine) 0%, #F6F1E8 100%);">
+      <div class="container">
+        <div class="about-hero-grid" style="display: grid; grid-template-columns: 0.95fr 1.15fr; gap: clamp(2.5rem, 5vw, 5rem); align-items: center;">
+          
+          <!-- Portrait Frame -->
+          <div style="position: relative;">
+            <div class="clay-card about-portrait-card" style="padding: 14px; border-radius: 36px; background: linear-gradient(145deg, #FFFFFF 0%, #EFE8DC 100%);">
+              <img src="assets/images/regina_portrait.jpg" alt="Regina Fraga Abualrish REALTOR Dallas TX" style="width: 100%; height: 540px; object-fit: cover; border-radius: 28px;">
+            </div>
+            <!-- Experience Badge -->
+            <div class="floating-insight" style="bottom: -20px; right: -15px; padding: 16px 24px;">
+              <div style="font-family: var(--font-serif); font-size: 2.2rem; font-weight: 700; color: var(--bronze-dark); line-height: 1;">22+</div>
+              <div style="font-size: 0.78rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-espresso);">
+                Years Marketing &<br>Real Estate Mastery
+              </div>
+            </div>
+          </div>
+
+          <!-- Editorial Narrative -->
+          <div>
+            <span class="eyebrow">The Story & Philosophy</span>
+            <h1 style="font-size: clamp(2.6rem, 4.2vw, 3.8rem); margin: 8px 0 20px; line-height: 1.12;">
+              Passion for People.<br><span class="serif-italic" style="color: var(--bronze-primary);">Precision in Real Estate.</span>
+            </h1>
+            <p class="lead" style="margin-bottom: 16px;">
+              Regina Fraga Abualrish brings over 22 years of hands-on expertise in advertising, brand positioning, and executive administration to the Dallas-Fort Worth luxury real estate market.
+            </p>
+            <p style="margin-bottom: 16px; color: var(--text-body);">
+              Before becoming a licensed Texas REALTOR® with Ready Real Estate, Regina spent decades helping entrepreneurs, corporate leaders, and talent establish powerful market identities through targeted digital strategy, custom branding, and public relations. 
+            </p>
+            <p style="margin-bottom: 24px; color: var(--text-body);">
+              Today, that rare background gives her clients an extraordinary competitive edge. When representing sellers, Regina conceives sophisticated marketing blitzes that capture elite, pre-qualified buyers. When guiding buyers, her relentless market scrutiny and instinctive negotiation acumen ensure every contract protects and maximizes equity.
+            </p>
+            
+            <div style="display: flex; flex-wrap: wrap; gap: 14px; margin-top: 10px;">
+              <a href="contact.html" class="btn btn-bronze">Work With Regina</a>
+              <a href="properties.html" class="btn btn-light">View Active Portfolio</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CAREER MILESTONES & TIMELINE -->
+    <section class="section" style="background: var(--bg-travertine);">
+      <div class="container">
+        <div class="section-header">
+          <span class="eyebrow">Proven Trajectory</span>
+          <h2>Two Decades of Excellence</h2>
+          <p>A relentless journey grounded in marketing innovation, client trust, and multimillion-dollar Dallas real estate sales.</p>
+        </div>
+
+        <div style="max-width: 860px; margin: 0 auto; display: flex; flex-direction: column; gap: 24px; position: relative;">
+          
+          <!-- Milestone 1 -->
+          <div class="clay-card milestone-item" style="padding: 28px 32px; display: grid; grid-template-columns: 140px 1fr; gap: 20px; align-items: center;">
+            <div>
+              <span style="font-family: var(--font-serif); font-size: 2.2rem; font-weight: 700; color: var(--bronze-dark);">2002–12</span>
+              <div style="font-size: 0.78rem; font-weight: 700; text-transform: uppercase; color: var(--text-muted);">Foundation</div>
+            </div>
+            <div>
+              <h4 style="font-family: var(--font-serif); font-size: 1.4rem; margin-bottom: 6px;">Advertising & Brand Development Leadership</h4>
+              <p style="font-size: 0.95rem; color: var(--text-body);">
+                Directed comprehensive media campaigns, promotional strategy, and public relations. Perfected the art of audience targeting and high-stakes contract negotiation.
+              </p>
+            </div>
+          </div>
+
+          <!-- Milestone 2 -->
+          <div class="clay-card milestone-item" style="padding: 28px 32px; display: grid; grid-template-columns: 140px 1fr; gap: 20px; align-items: center;">
+            <div>
+              <span style="font-family: var(--font-serif); font-size: 2.2rem; font-weight: 700; color: var(--bronze-dark);">2012–19</span>
+              <div style="font-size: 0.78rem; font-weight: 700; text-transform: uppercase; color: var(--text-muted);">Expansion</div>
+            </div>
+            <div>
+              <h4 style="font-family: var(--font-serif); font-size: 1.4rem; margin-bottom: 6px;">Digital Marketing & Strategic Consulting</h4>
+              <p style="font-size: 0.95rem; color: var(--text-body);">
+                Spearheaded social media marketing architectures, bespoke websites, and VIP client consulting across North Texas business networks.
+              </p>
+            </div>
+          </div>
+
+          <!-- Milestone 3 -->
+          <div class="clay-card milestone-item" style="padding: 28px 32px; display: grid; grid-template-columns: 140px 1fr; gap: 20px; align-items: center; border-left: 4px solid var(--bronze-primary);">
+            <div>
+              <span style="font-family: var(--font-serif); font-size: 2.2rem; font-weight: 700; color: var(--bronze-dark);">Present</span>
+              <div style="font-size: 0.78rem; font-weight: 700; text-transform: uppercase; color: var(--bronze-dark);">Top Producer</div>
+            </div>
+            <div>
+              <h4 style="font-family: var(--font-serif); font-size: 1.4rem; margin-bottom: 6px;">Licensed Texas REALTOR® • Ready Real Estate LLC</h4>
+              <p style="font-size: 0.95rem; color: var(--text-body);">
+                License #735487. Representing distinguished buyers and sellers across Dallas, Highland Park, Preston Hollow, Addison, Plano, and Southlake with over $120M+ closed volume.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- FULL CLIENT REVIEWS WALL -->
+    <section id="testimonials" class="section" style="background: #FAF7F2; border-top: 1px solid rgba(164,125,73,0.1);">
+      <div class="container">
+        <div class="section-header">
+          <span class="eyebrow">Verified Experiences</span>
+          <h2>Client Reviews & Testimonials</h2>
+          <p>Unfiltered accounts from Texas homeowners, luxury buyers, and families who partnered with Regina.</p>
+        </div>
+
+        <div class="testimonials-grid">
+          <!-- Review 1 -->
+          <div class="testimonial-card">
+            <div>
+              <div class="test-stars">★★★★★</div>
+              <p class="test-quote">
+                "Our main goal was to sell our property—and we did with an outstanding result! The offers started appearing within a week from listing, and we closed not much longer after that. The appropriate pricing attracted many qualified buyers and the staging looked simply beautiful."
+              </p>
+            </div>
+            <div class="test-author-row">
+              <div>
+                <div class="author-name">Randi S.</div>
+                <div class="author-sub">Weatherford Buyer & Seller</div>
+              </div>
+              <span style="font-size: 0.8rem; color: var(--text-muted);">Verified Client</span>
+            </div>
+          </div>
+
+          <!-- Review 2 -->
+          <div class="testimonial-card">
+            <div>
+              <div class="test-stars">★★★★★</div>
+              <p class="test-quote">
+                "Positive approach from the moment we met! Knowledgeable, great attitude, and extremely pleasant to work with. She took care of all the details on her own, making the transaction comfortable for someone like me who is constantly occupied with work."
+              </p>
+            </div>
+            <div class="test-author-row">
+              <div>
+                <div class="author-name">Justine</div>
+                <div class="author-sub">Executive Seller</div>
+              </div>
+              <span style="font-size: 0.8rem; color: var(--text-muted);">Verified Client</span>
+            </div>
+          </div>
+
+          <!-- Review 3 -->
+          <div class="testimonial-card">
+            <div>
+              <div class="test-stars">★★★★★</div>
+              <p class="test-quote">
+                "Selling the house where our children were raised was emotional and nerve-wracking. Regina found the perfect family who appreciated our home just as much as we did. Financially, the final offer exceeded our expectations thanks to great marketing."
+              </p>
+            </div>
+            <div class="test-author-row">
+              <div>
+                <div class="author-name">Cara and Leo</div>
+                <div class="author-sub">Preston Hollow Sellers</div>
+              </div>
+              <span style="font-size: 0.8rem; color: var(--text-muted);">Verified Client</span>
+            </div>
+          </div>
+
+          <!-- Review 4 -->
+          <div class="testimonial-card">
+            <div>
+              <div class="test-stars">★★★★★</div>
+              <p class="test-quote">
+                "I got responses to my messages in an instant and could always call whenever I had questions. At our very first meeting, she presented a very logical strategy to market our property which proved to us she knew her stuff and we could trust her."
+              </p>
+            </div>
+            <div class="test-author-row">
+              <div>
+                <div class="author-name">Sage and Ellis</div>
+                <div class="author-sub">Dallas Home Sellers</div>
+              </div>
+              <span style="font-size: 0.8rem; color: var(--text-muted);">Top Dollar Sale</span>
+            </div>
+          </div>
+
+          <!-- Review 5 -->
+          <div class="testimonial-card">
+            <div>
+              <div class="test-stars">★★★★★</div>
+              <p class="test-quote">
+                "She answered our messages in no time and made us feel so comfortable throughout. The eco-friendly, sustainable estate she helped us acquire is our dream home where we'd love to raise our children. The transaction was a wonderful time."
+              </p>
+            </div>
+            <div class="test-author-row">
+              <div>
+                <div class="author-name">Mina and Charles</div>
+                <div class="author-sub">Lakewood Luxury Buyers</div>
+              </div>
+              <span style="font-size: 0.8rem; color: var(--text-muted);">Verified Client</span>
+            </div>
+          </div>
+
+          <!-- Review 6 -->
+          <div class="testimonial-card">
+            <div>
+              <div class="test-stars">★★★★★</div>
+              <p class="test-quote">
+                "Patrick and Regina went above and beyond to find the perfect property that met all our needs. We had specific requirements regarding amenities, schools, and venues. They definitely succeeded—we closed on our dream place!"
+              </p>
+            </div>
+            <div class="test-author-row">
+              <div>
+                <div class="author-name">Mallory and Vincent</div>
+                <div class="author-sub">Dallas Buyers</div>
+              </div>
+              <span style="font-size: 0.8rem; color: var(--text-muted);">Verified Client</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONSULTATION BANNER -->
+    <section class="section-sm">
+      <div class="container">
+        <div class="valuation-cta-banner" style="text-align: center; padding: clamp(3rem, 5vw, 4.5rem) 24px;">
+          <span class="eyebrow" style="color: var(--bronze-accent); margin-bottom: 8px;">Private Consultation</span>
+          <h2 style="margin-bottom: 14px; font-size: clamp(2rem, 3.5vw, 3rem);">Ready to Discuss Your Next Move in Dallas Real Estate?</h2>
+          <p style="max-width: 620px; margin: 0 auto 28px; font-size: 1.1rem; color: #D6CCC0;">
+            Whether evaluating your home's current market position or initiating a bespoke search for your next residence, Regina is prepared to guide you.
+          </p>
+          <div style="display: flex; justify-content: center; gap: 14px; flex-wrap: wrap;">
+            <a href="contact.html" class="btn btn-bronze btn-lg">Schedule Private Meeting</a>
+            <a href="tel:469-880-5386" class="btn btn-light btn-lg">Call Directly: (469) 880-5386</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- LUXURY CLAYMORPHIC FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="brand-logo" style="margin-bottom: 16px;">
+            <div class="brand-mark">R</div>
+            <div class="brand-text">
+              <span class="brand-name" style="color: #FFFFFF;">Regina Fraga Abualrish</span>
+              <span class="brand-tagline">Texas REALTOR® • Luxury Specialist</span>
+            </div>
+          </div>
+          <p>
+            Dedicated to elevating the standard of luxury real estate representation across Dallas-Fort Worth. Backed by the robust technology and market strength of Ready Real Estate LLC.
+          </p>
+          <div class="footer-trec-card">
+            <strong>Ready Real Estate LLC</strong><br>
+            8080 N. Central Expressway, Suite 1700, Dallas, TX 75206<br>
+            Texas Real Estate Commission License #735487
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h5>Navigation</h5>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="properties.html">Featured Residences</a></li>
+            <li><a href="about.html">About Regina Fraga</a></li>
+            <li><a href="contact.html">Instant Home Valuation</a></li>
+            <li><a href="contact.html">Schedule Consultation</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>Prime Markets</h5>
+          <ul class="footer-links">
+            <li><a href="properties.html?search=Highland%20Park">Highland Park</a></li>
+            <li><a href="properties.html?search=Preston%20Hollow">Preston Hollow</a></li>
+            <li><a href="properties.html?search=Uptown">Uptown Dallas</a></li>
+            <li><a href="properties.html?search=Lakewood">Lakewood & East Dallas</a></li>
+            <li><a href="properties.html?search=Southlake">Southlake & Frisco</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>Direct Inquiries</h5>
+          <p style="color: #DDD4C7; font-size: 0.95rem; margin-bottom: 12px;">
+            <strong>Phone:</strong> <a href="tel:469-880-5386" style="color: var(--bronze-accent);">(469) 880-5386</a><br>
+            <strong>Email:</strong> <a href="mailto:reginalovesrealestate@gmail.com" style="color: var(--bronze-accent);">reginalovesrealestate@gmail.com</a>
+          </p>
+          <a href="contact.html" class="btn btn-bronze btn-sm">Direct Message</a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          © 2026 Regina Fraga Abualrish. All Rights Reserved. Equal Housing Opportunity.
+        </div>
+        <div style="display: flex; gap: 18px;">
+          <a href="https://www.trec.texas.gov/" target="_blank" rel="noopener">TREC Consumer Protection Notice</a>
+          <a href="https://www.trec.texas.gov/" target="_blank" rel="noopener">Information About Brokerage Services</a>
+          <a href="contact.html">Privacy Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Core Scripts -->
+  <script src="js/router.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/properties.js"></script>
+  <script src="js/valuation.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Regina Fraga Abualrish | Luxury Real Estate Specialist | Dallas, TX</title>
+  <meta name="description" content="Discover premier Dallas-Fort Worth luxury residences, Highland Park estates, and bespoke client representation with Regina Fraga Abualrish. Over 22 years of marketing and real estate excellence.">
+  
+  <!-- CSS Stylesheets -->
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/transitions.css">
+
+  <!-- GSAP 3 & ScrollTrigger (CDN) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+</head>
+<body>
+
+  <!-- Top Bar: Official REALTOR Credentials & Direct Lines -->
+  <div class="top-bar">
+    <div class="container top-bar-inner">
+      <div class="top-bar-badge">
+        <span class="dot"></span>
+        <span>Regina Fraga Abualrish, REALTOR® • License #735487 • Ready Real Estate LLC</span>
+      </div>
+      <div class="top-bar-links">
+        <a href="tel:469-880-5386">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.02-.24c1.12.37 2.33.57 3.57.57a1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.57a1 1 0 01-.24 1.02l-2.21 2.2z"/></svg>
+          (469) 880-5386
+        </a>
+        <a href="mailto:reginalovesrealestate@gmail.com">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+          reginalovesrealestate@gmail.com
+        </a>
+        <span>Dallas, Texas</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Floating Claymorphic Navigation -->
+  <header class="site-header">
+    <div class="nav-pill-container">
+      <a href="index.html" class="brand-logo">
+        <div class="brand-mark">R</div>
+        <div class="brand-text">
+          <span class="brand-name">Regina Fraga</span>
+          <span class="brand-tagline">Dallas Luxury Real Estate</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link active">Home</a></li>
+          <li><a href="properties.html" class="nav-link">Properties</a></li>
+          <li><a href="about.html" class="nav-link">About Regina</a></li>
+          <li><a href="contact.html" class="nav-link">Contact & Valuation</a></li>
+        </ul>
+      </nav>
+
+      <!-- Nav CTA -->
+      <div class="nav-cta-wrap">
+        <a href="tel:469-880-5386" class="nav-phone-pill">
+          <svg viewBox="0 0 24 24"><path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.02-.24c1.12.37 2.33.57 3.57.57a1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.57a1 1 0 01-.24 1.02l-2.21 2.2z"/></svg>
+          <span>469-880-5386</span>
+        </a>
+        <a href="contact.html" class="btn btn-bronze btn-sm">Book Consultation</a>
+        <button class="mobile-toggle" aria-label="Open mobile menu">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="drawer-backdrop"></div>
+  <div class="mobile-drawer">
+    <div>
+      <div class="drawer-header">
+        <a href="index.html" class="brand-logo">
+          <div class="brand-mark">R</div>
+          <div class="brand-text">
+            <span class="brand-name">Regina Fraga</span>
+            <span class="brand-tagline">Luxury Real Estate</span>
+          </div>
+        </a>
+        <button class="drawer-close-btn" aria-label="Close menu">✕</button>
+      </div>
+      <ul class="drawer-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="properties.html">Properties</a></li>
+        <li><a href="about.html">About Regina</a></li>
+        <li><a href="contact.html">Contact & Valuation</a></li>
+      </ul>
+    </div>
+    <div style="margin-top: 30px;">
+      <a href="contact.html" class="btn btn-bronze btn-lg" style="width: 100%;">Book Private Consultation</a>
+      <p style="text-align: center; margin-top: 14px; font-size: 0.85rem; color: var(--text-muted);">Ready Real Estate LLC • Dallas, TX</p>
+    </div>
+  </div>
+
+  <!-- MAIN DYNAMIC CONTAINER FOR SPA ROUTING -->
+  <main id="page-container">
+
+    <!-- HERO SECTION: ASYMMETRICAL LUXURY ARCHITECTURE -->
+    <section class="hero-section">
+      <div class="hero-bg-accent"></div>
+      <div class="container hero-grid">
+        
+        <!-- Left Hero Column -->
+        <div class="hero-content">
+          <span class="eyebrow">Dallas-Fort Worth Luxury Real Estate</span>
+          <h1 class="hero-headline">
+            I will help you <br><span class="serif-italic">find your place.</span>
+          </h1>
+          <p class="hero-description">
+            Combining 22+ years of marketing precision, sophisticated digital strategy, and unrivaled Dallas neighborhood intimacy. Whether acquiring an architectural landmark or commanding top dollar for your estate, experience white-glove advisory from contract to close.
+          </p>
+
+          <!-- Live Stats Pills -->
+          <div class="hero-stats-row">
+            <div class="hero-stat-pill">
+              <span class="num" data-counter="120" data-prefix="$" data-suffix="M+">$120M+</span>
+              <span class="label">Volume<br>Closed</span>
+            </div>
+            <div class="hero-stat-pill">
+              <span class="num" data-counter="22" data-suffix="+">22+</span>
+              <span class="label">Years Marketing<br>& Negotiation</span>
+            </div>
+            <div class="hero-stat-pill">
+              <span class="num" data-counter="4.9" data-decimals="1" data-suffix=" ★">4.9 ★</span>
+              <span class="label">Client Trust<br>80+ Reviews</span>
+            </div>
+          </div>
+
+          <!-- Claymorphic Quick-Search Module -->
+          <div class="quick-search-box">
+            <div class="search-mode-tabs">
+              <button type="button" class="search-tab-btn active" data-mode="buy">For Sale</button>
+              <button type="button" class="search-tab-btn" data-mode="rent">For Lease</button>
+              <a href="contact.html" class="search-tab-btn" style="text-decoration: none;">Home Valuation</a>
+            </div>
+            <form id="hero-search-form" class="search-fields-grid">
+              <div class="search-field-group">
+                <label class="search-field-label">Location / Neighborhood</label>
+                <select id="hero-search-location" class="search-select">
+                  <option value="">All Dallas-Fort Worth</option>
+                  <option value="Highland Park">Highland Park</option>
+                  <option value="Preston Hollow">Preston Hollow</option>
+                  <option value="Uptown">Uptown Dallas</option>
+                  <option value="Lakewood">Lakewood / White Rock</option>
+                  <option value="Southlake">Southlake</option>
+                  <option value="Frisco">Frisco / Plano</option>
+                  <option value="Addison">Addison</option>
+                </select>
+              </div>
+
+              <div class="search-field-group">
+                <label class="search-field-label">Property Style</label>
+                <select id="hero-search-type" class="search-select">
+                  <option value="all">All Styles</option>
+                  <option value="estate">Chateau / Grand Estate</option>
+                  <option value="modern">Architectural Modern</option>
+                  <option value="penthouse">High-Rise Penthouse</option>
+                </select>
+              </div>
+
+              <div class="search-field-group">
+                <label class="search-field-label">Price Range</label>
+                <select class="search-select">
+                  <option value="all">Any Price</option>
+                  <option value="2-4">$2M – $4M</option>
+                  <option value="4-6">$4M – $6M</option>
+                  <option value="6plus">$6M+</option>
+                </select>
+              </div>
+
+              <div class="search-field-group" style="justify-content: flex-end;">
+                <label class="search-field-label">&nbsp;</label>
+                <button type="submit" class="btn btn-bronze" style="padding: 13px 26px;">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                  Search
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <!-- Right Hero Column: Showcase Visual & Floating Claymorphic Badges -->
+        <div class="hero-visual-wrapper">
+          <div class="hero-image-frame clay-card">
+            <img src="assets/images/hero_estate.jpg" alt="Premier Modern Luxury Estate in Dallas TX" fetchpriority="high">
+          </div>
+
+          <!-- Floating Insight 1: Featured Residence -->
+          <div class="floating-insight insight-estate">
+            <img src="assets/images/property_highland_park.jpg" alt="Highland Park Residence" class="insight-estate-thumb">
+            <div class="insight-estate-info">
+              <h5>The Highland Park Estate</h5>
+              <p>$5,850,000 • 7,850 Sq Ft</p>
+            </div>
+          </div>
+
+          <!-- Floating Insight 2: Client Trust Index -->
+          <div class="floating-insight insight-trust">
+            <div class="trust-avatar-group">
+              <img src="assets/images/regina_portrait.jpg" alt="Regina Client Representative">
+              <img src="assets/images/property_uptown_penthouse.jpg" alt="Buyer Representative">
+            </div>
+            <div class="trust-text">
+              <h5>
+                <span>99.4% Client Score</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="#C49E65"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              </h5>
+              <p>Top Producer • Ready Real Estate LLC</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION: CURATED FEATURED PROPERTIES -->
+    <section class="section" style="background: var(--bg-travertine);">
+      <div class="container">
+        <div class="section-header">
+          <span class="eyebrow">Curated Portfolio</span>
+          <h2>Featured Dallas-Fort Worth Residences</h2>
+          <p>Hand-selected estates, architectural custom residences, and sky penthouses offering peerless craftsmanship and prestigious North Texas addresses.</p>
+        </div>
+
+        <!-- Dynamic Featured Grid (Populated via properties.js) -->
+        <div id="featured-properties-grid" class="properties-grid"></div>
+
+        <div style="text-align: center; margin-top: clamp(2.5rem, 4vw, 4rem);">
+          <a href="properties.html" class="btn btn-bronze btn-lg">
+            View All Properties
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION: THE REGINA DIFFERENCE (4 PILLARS) -->
+    <section class="section" style="background: #FAF7F2; border-top: 1px solid rgba(164,125,73,0.1); border-bottom: 1px solid rgba(164,125,73,0.1);">
+      <div class="container">
+        <div class="section-header">
+          <span class="eyebrow">Uncompromising Representation</span>
+          <h2>The Regina Difference</h2>
+          <p>Real estate is more than transactions—it is your legacy, your sanctuary, and your most significant capital investment. Here is how Regina protects and maximizes both.</p>
+        </div>
+
+        <div class="difference-grid">
+          <!-- Pillar 1 -->
+          <div class="difference-card">
+            <div class="diff-icon-wrap">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M12 20V10M18 20V4M6 20v-4"/></svg>
+            </div>
+            <h4>22-Year Strategic Marketing Mastery</h4>
+            <p>Decades of background in professional advertising, media campaigns, and brand development ensure your property commands unprecedented visibility and premium qualified buyer interest.</p>
+          </div>
+
+          <!-- Pillar 2 -->
+          <div class="difference-card">
+            <div class="diff-icon-wrap">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon></svg>
+            </div>
+            <h4>DFW Neighborhood Intimacy</h4>
+            <p>From private off-market whisper listings in Highland Park to waterfront retreats in Lakewood and master-planned enclaves in Southlake, gain direct access to insider market intelligence.</p>
+          </div>
+
+          <!-- Pillar 3 -->
+          <div class="difference-card">
+            <div class="diff-icon-wrap">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+            </div>
+            <h4>White-Glove Concierge Service</h4>
+            <p>Every detail is curated with discreet precision: architectural staging consultations, private luxury showings, vetted lender coordination, and thorough contract supervision.</p>
+          </div>
+
+          <!-- Pillar 4 -->
+          <div class="difference-card">
+            <div class="diff-icon-wrap">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            </div>
+            <h4>Fierce, Data-Driven Negotiation</h4>
+            <p>Armed with real-time transactional analytics and decisive negotiation tactics, Regina consistently closes deals that beat market averages and protect client equity.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION: DALLAS NEIGHBORHOODS SPOTLIGHT -->
+    <section class="section" style="background: var(--bg-travertine);">
+      <div class="container">
+        <div class="section-header">
+          <span class="eyebrow">Prime Enclaves</span>
+          <h2>Dallas-Fort Worth Neighborhoods</h2>
+          <p>Explore distinct architectural character, lifestyle amenities, and premier school districts across North Texas.</p>
+        </div>
+
+        <div class="neighborhood-grid">
+          <!-- Highland Park -->
+          <div class="neighborhood-card">
+            <img src="assets/images/property_highland_park.jpg" alt="Highland Park Dallas Texas">
+            <div class="neighborhood-overlay">
+              <span class="eyebrow" style="color: var(--bronze-accent); margin-bottom: 4px;">Exclusive Enclave</span>
+              <h3>Highland Park</h3>
+              <p>Old-world grandeur, Highland Park Village designer retail, tree-lined boulevards, and top-tier HPISD public education.</p>
+              <a href="properties.html?search=Highland%20Park" class="btn btn-light btn-sm" style="align-self: flex-start;">Explore Residences</a>
+            </div>
+          </div>
+
+          <!-- Preston Hollow -->
+          <div class="neighborhood-card">
+            <img src="assets/images/property_preston_hollow.jpg" alt="Preston Hollow Dallas Texas">
+            <div class="neighborhood-overlay">
+              <span class="eyebrow" style="color: var(--bronze-accent); margin-bottom: 4px;">Acreage & Privacy</span>
+              <h3>Preston Hollow</h3>
+              <p>Expansive gated private estates, mature live oaks, and peaceful seclusion minutes from the Dallas medical & financial core.</p>
+              <a href="properties.html?search=Preston%20Hollow" class="btn btn-light btn-sm" style="align-self: flex-start;">Explore Residences</a>
+            </div>
+          </div>
+
+          <!-- Uptown & Turtle Creek -->
+          <div class="neighborhood-card">
+            <img src="assets/images/property_uptown_penthouse.jpg" alt="Uptown Dallas Sky Penthouses">
+            <div class="neighborhood-overlay">
+              <span class="eyebrow" style="color: var(--bronze-accent); margin-bottom: 4px;">Cosmopolitan Skyline</span>
+              <h3>Uptown & Turtle Creek</h3>
+              <p>Vibrant urban high-rise living, Michelin-starred dining, walkable arts district, and panoramic skyline terraces.</p>
+              <a href="properties.html?search=Uptown" class="btn btn-light btn-sm" style="align-self: flex-start;">Explore Residences</a>
+            </div>
+          </div>
+
+          <!-- Lakewood & White Rock -->
+          <div class="neighborhood-card">
+            <img src="assets/images/property_lakewood.jpg" alt="Lakewood Dallas Lakeside Living">
+            <div class="neighborhood-overlay">
+              <span class="eyebrow" style="color: var(--bronze-accent); margin-bottom: 4px;">Waterfront Serenity</span>
+              <h3>Lakewood & White Rock</h3>
+              <p>Scenic lake breezes, custom organic contemporary homes, historic architecture, and Dallas country club culture.</p>
+              <a href="properties.html?search=Lakewood" class="btn btn-light btn-sm" style="align-self: flex-start;">Explore Residences</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION: HOME VALUATION CTA CALLOUT -->
+    <section class="section-sm">
+      <div class="container">
+        <div class="valuation-cta-banner">
+          <div class="valuation-banner-grid">
+            <div>
+              <span class="eyebrow" style="color: var(--bronze-accent); margin-bottom: 8px;">Complimentary Market Dossier</span>
+              <h2>What Is Your Dallas Property Worth in Today's Market?</h2>
+              <p>Receive an exhaustive, custom Comparative Market Analysis evaluating active competition, recent off-market comps, and target buyer positioning.</p>
+            </div>
+            <div style="text-align: right; display: flex; flex-direction: column; gap: 14px; align-items: flex-end;">
+              <a href="contact.html" class="btn btn-bronze btn-lg">
+                Calculate Instant Valuation
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+              </a>
+              <span style="font-size: 0.85rem; color: #AFA598;">100% Confidential • No Obligation</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION: CLIENT TESTIMONIALS (VERIFIED DALLAS BUYERS & SELLERS) -->
+    <section class="section" style="background: #FAF7F2;">
+      <div class="container">
+        <div class="section-header">
+          <span class="eyebrow">Client Praise</span>
+          <h2>Proven Trust, Unsurpassed Results</h2>
+          <p>Hear from Texas families, investors, and homeowners who achieved their real estate ambitions through Regina's dedicated advisory.</p>
+        </div>
+
+        <div class="testimonials-grid">
+          <!-- Review 1 -->
+          <div class="testimonial-card">
+            <div>
+              <div class="test-stars">★★★★★</div>
+              <p class="test-quote">
+                "Because of Regina and her team's talent and devotion, we negotiated an offer exceeding our asking price within days. Everything went down smoothly without trouble—we could not have asked for more."
+              </p>
+            </div>
+            <div class="test-author-row">
+              <div>
+                <div class="author-name">Chris S.</div>
+                <div class="author-sub">Dallas Home Seller • Exceeded Asking</div>
+              </div>
+              <span style="font-size: 0.8rem; color: var(--text-muted);">Verified Closed Client</span>
+            </div>
+          </div>
+
+          <!-- Review 2 -->
+          <div class="testimonial-card">
+            <div>
+              <div class="test-stars">★★★★★</div>
+              <p class="test-quote">
+                "It took less than thirty days to sell our property! Regina kept us well-informed and confident. Her marketing strategies and professional staging created a competitive environment with exceptional offers."
+              </p>
+            </div>
+            <div class="test-author-row">
+              <div>
+                <div class="author-name">Brandon & Melissa</div>
+                <div class="author-sub">Sellers in Fate / North Texas</div>
+              </div>
+              <span style="font-size: 0.8rem; color: var(--text-muted);">Under Contract in 12 Days</span>
+            </div>
+          </div>
+
+          <!-- Review 3 -->
+          <div class="testimonial-card">
+            <div>
+              <div class="test-stars">★★★★★</div>
+              <p class="test-quote">
+                "As first-time luxury buyers, we needed someone patient and exceptionally knowledgeable. Regina answered every question, secured the best terms, and made the entire closing feel exciting and completely stress-free."
+              </p>
+            </div>
+            <div class="test-author-row">
+              <div>
+                <div class="author-name">Rory & Miles</div>
+                <div class="author-sub">Highland Park Home Buyers</div>
+              </div>
+              <span style="font-size: 0.8rem; color: var(--text-muted);">Dream Residence Acquired</span>
+            </div>
+          </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 40px;">
+          <a href="about.html#testimonials" class="btn btn-light">Read All 80+ Client Reviews</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- LUXURY CLAYMORPHIC FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <!-- Brand Summary -->
+        <div class="footer-brand">
+          <div class="brand-logo" style="margin-bottom: 16px;">
+            <div class="brand-mark">R</div>
+            <div class="brand-text">
+              <span class="brand-name" style="color: #FFFFFF;">Regina Fraga Abualrish</span>
+              <span class="brand-tagline">Texas REALTOR® • Luxury Specialist</span>
+            </div>
+          </div>
+          <p>
+            Dedicated to elevating the standard of luxury real estate representation across Dallas-Fort Worth. Backed by the robust technology and market strength of Ready Real Estate LLC.
+          </p>
+          <div class="footer-trec-card">
+            <strong>Ready Real Estate LLC</strong><br>
+            8080 N. Central Expressway, Suite 1700, Dallas, TX 75206<br>
+            Texas Real Estate Commission License #735487
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-col">
+          <h5>Navigation</h5>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="properties.html">Featured Residences</a></li>
+            <li><a href="about.html">About Regina Fraga</a></li>
+            <li><a href="contact.html">Instant Home Valuation</a></li>
+            <li><a href="contact.html">Schedule Consultation</a></li>
+          </ul>
+        </div>
+
+        <!-- Neighborhoods -->
+        <div class="footer-col">
+          <h5>Prime Markets</h5>
+          <ul class="footer-links">
+            <li><a href="properties.html?search=Highland%20Park">Highland Park</a></li>
+            <li><a href="properties.html?search=Preston%20Hollow">Preston Hollow</a></li>
+            <li><a href="properties.html?search=Uptown">Uptown Dallas</a></li>
+            <li><a href="properties.html?search=Lakewood">Lakewood & East Dallas</a></li>
+            <li><a href="properties.html?search=Southlake">Southlake & Frisco</a></li>
+          </ul>
+        </div>
+
+        <!-- Direct Contact -->
+        <div class="footer-col">
+          <h5>Direct Inquiries</h5>
+          <p style="color: #DDD4C7; font-size: 0.95rem; margin-bottom: 12px;">
+            <strong>Phone:</strong> <a href="tel:469-880-5386" style="color: var(--bronze-accent);">(469) 880-5386</a><br>
+            <strong>Email:</strong> <a href="mailto:reginalovesrealestate@gmail.com" style="color: var(--bronze-accent);">reginalovesrealestate@gmail.com</a>
+          </p>
+          <p style="color: #AFA598; font-size: 0.85rem; line-height: 1.5; margin-bottom: 16px;">
+            Private showings by appointment. Inquiries answered within 2 hours.
+          </p>
+          <a href="contact.html" class="btn btn-bronze btn-sm">Direct Message</a>
+        </div>
+      </div>
+
+      <!-- Legal & TREC Compliance -->
+      <div class="footer-bottom">
+        <div>
+          © 2026 Regina Fraga Abualrish. All Rights Reserved. Equal Housing Opportunity.
+        </div>
+        <div style="display: flex; gap: 18px;">
+          <a href="https://www.trec.texas.gov/" target="_blank" rel="noopener">TREC Consumer Protection Notice</a>
+          <a href="https://www.trec.texas.gov/" target="_blank" rel="noopener">Information About Brokerage Services</a>
+          <a href="contact.html">Privacy Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Core Scripts -->
+  <script src="js/router.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/properties.js"></script>
+  <script src="js/valuation.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

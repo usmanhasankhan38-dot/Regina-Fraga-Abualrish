@@ -1,0 +1,104 @@
+/* ==========================================================================
+   REGINA FRAGA ABUALRISH - LUXURY REAL ESTATE
+   PAGE TRANSITION & GSAP ANIMATION STYLES
+   ========================================================================== */
+
+/* Full-Screen Transition Curtain */
+.transition-curtain {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 99999;
+  pointer-events: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.curtain-layer {
+  position: absolute;
+  inset: 0;
+  transform: translateY(100%);
+  will-change: transform;
+}
+
+.curtain-layer.layer-bronze {
+  background: linear-gradient(135deg, #B58F58 0%, #8C6430 100%);
+  z-index: 1;
+}
+
+.curtain-layer.layer-charcoal {
+  background: #141210;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.curtain-brand {
+  opacity: 0;
+  transform: translateY(20px);
+  text-align: center;
+  color: #FFFFFF;
+}
+
+.curtain-brand h2 {
+  font-family: var(--font-serif);
+  font-size: 2.4rem;
+  color: #FFFFFF;
+  margin-bottom: 6px;
+  letter-spacing: 0.02em;
+}
+
+.curtain-brand p {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--bronze-accent);
+}
+
+.curtain-spinner {
+  width: 32px;
+  height: 32px;
+  border: 2px solid rgba(196, 158, 101, 0.2);
+  border-top-color: var(--bronze-accent);
+  border-radius: 50%;
+  animation: curtainSpin 0.7s linear infinite;
+  margin-top: 20px;
+}
+
+@keyframes curtainSpin {
+  to { transform: rotate(360deg); }
+}
+
+/* Page Container Smooth State */
+#page-container {
+  min-height: 70vh;
+  opacity: 1;
+  transform: translateY(0);
+  will-change: opacity, transform;
+}
+
+/* GSAP Pre-Animation Hidden Classes (progressive enhancement) */
+.gsap-reveal {
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.gsap-reveal-stagger {
+  opacity: 0;
+  transform: translateY(24px);
+}
+
+/* Tactile 3D Tilt Card Container */
+.tilt-card {
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  will-change: transform;
+}
+
+.tilt-inner {
+  transform: translateZ(20px);
+}

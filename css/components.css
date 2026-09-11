@@ -62,12 +62,14 @@
    2. FLOATING CLAYMORPHIC NAVIGATION
    -------------------------------------------------------------------------- */
 .site-header {
+  position: -webkit-sticky;
   position: sticky;
-  top: 16px;
+  top: 14px;
   z-index: 1000;
   width: 100%;
   padding: 0 clamp(1rem, 3vw, 2.5rem);
   pointer-events: none; /* children enable pointer events */
+  transition: top 0.2s ease;
 }
 
 .nav-pill-container {
